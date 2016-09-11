@@ -363,7 +363,7 @@ $(window).load(function(){
             },
             delay: 2500,
             animate: {
-                    enter: 'animated fadeInUp',
+                    enter: 'Welcome Hi Fish!',
                     exit: 'animated fadeOutDown'
             },
             offset: {
@@ -375,7 +375,7 @@ $(window).load(function(){
     
     setTimeout(function () {
         if (!$('.login-content')[0]) {
-            notify('Welcome back Mallinda Hollaway', 'default');
+            notify('Welcome back Hi Fish!', 'default');
         }
     }, 1000)
 });
@@ -898,10 +898,23 @@ $(window).load(function () {
         Page Loader
      -----------------------------------------------------------*/
     if($('.page-loader')[0]) {
-        setTimeout (function () {
-            $('.page-loader').fadeOut();
-        }, 500);
-
+        $.ajax({
+           url: "/fishapi/sensor/getsensorcurval/1/PH/",
+           xhrFields: {
+              withCredentials: true
+           }
+        }).done(function( data ) {
+            if(data.status == 200){
+                $("#ph").text(data.content.value);
+                 $("#temperature").text(data.content.value);
+                  $("#waterLevel").text(data.content.value);
+                  $("#tds").text(data.content.value);
+                  $('.page-loader').fadeOut();
+            }else{
+                console.log("接口异常！");
+            }
+              //console.log( "Sample of data:", data);
+          });
     }
 })
 
