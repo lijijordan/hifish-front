@@ -363,7 +363,7 @@ $(window).load(function(){
             },
             delay: 2500,
             animate: {
-                    enter: 'Welcome Hi Fish!',
+                    enter: '欢迎来到Hi Fish！',
                     exit: 'animated fadeOutDown'
             },
             offset: {
@@ -375,7 +375,7 @@ $(window).load(function(){
     
     setTimeout(function () {
         if (!$('.login-content')[0]) {
-            notify('Welcome back Hi Fish!', 'default');
+            notify('欢迎回到Hi Fihs！', 'default');
         }
     }, 1000)
 });
@@ -1005,39 +1005,39 @@ $(document).ready(function(){
                 editable: true,
                 events: [
                     {
-                        title: 'All Day',
+                        title: '换水',
                         start: '2014-06-01',
                     },
                     {
-                        title: 'Long Event',
+                        title: '盐度超标',
                         start: '2014-06-07',
                         end: '2014-06-10',
                     },
                     {
                         id: 999,
-                        title: 'Repeat',
+                        title: 'PH超标',
                         start: '2014-06-09',
                     },
                     {
                         id: 999,
-                        title: 'Repeat',
+                        title: '温度报警',
                         start: '2014-06-16',
                     },
                     {
-                        title: 'Meet',
+                        title: '光照低',
                         start: '2014-06-12',
                         end: '2014-06-12',
                     },
                     {
-                        title: 'Lunch',
+                        title: '换水',
                         start: '2014-06-12',
                     },
                     {
-                        title: 'Birthday',
+                        title: '新进生物',
                         start: '2014-06-13',
                     },
                     {
-                        title: 'Google',
+                        title: '换水',
                         url: 'http://google.com/',
                         start: '2014-06-28',
                     }
