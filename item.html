@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <!--[if IE 9 ]><html class="ie9"><![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>我的鱼缸</title>
-
+        <title>仪表盘</title>
+    
         <!-- Vendor CSS -->
-        <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
         <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
         <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
         <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
-        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
-
+        <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">        
+            
         <!-- CSS -->
         <link href="css/app_1.min.css" rel="stylesheet">
         <link href="css/app_2.min.css" rel="stylesheet">
-
     </head>
-
+    
     <body>
         <header id="header" class="clearfix">
             <ul class="h-inner">
@@ -31,7 +29,7 @@
                 </li>
 
                 <li class="hi-logo hidden-xs">
-                    <a href="index.html">我的鱼缸</a>
+                    <a href="index.html">仪表盘</a>
                 </li>
 
                 <li class="pull-right">
@@ -266,7 +264,7 @@
                 </div>
             </div>
         </header>
-
+        
         <section id="main">
             <aside id="sidebar" class="sidebar c-overflow">
                 <ul class="main-menu">
@@ -294,10 +292,7 @@
                             </li>
                         </ul>
                     </li>
-
-                    <li class="active">
-                        <a href="index.html"><i class="zmdi zmdi-home"></i> Home</a>
-                    </li>
+                    <li><a href="index.html"><i class="zmdi zmdi-home"></i> Home</a></li>
                     <li class="sub-menu">
                         <a href="" data-ma-action="submenu-toggle"><i class="zmdi zmdi-view-compact"></i> Headers</a>
 
@@ -350,11 +345,11 @@
                             <li><a href="other-components.html">Others</a></li>
                         </ul>
                     </li>
-                    <li class="sub-menu">
+                    <li class="sub-menu active toggled">
                         <a href="" data-ma-action="submenu-toggle"><i class="zmdi zmdi-trending-up"></i>Charts</a>
                         <ul>
                             <li><a href="flot-charts.html">Flot Charts</a></li>
-                            <li><a href="other-charts.html">Other Charts</a></li>
+                            <li><a class="active" href="other-charts.html">Other Charts</a></li>
                         </ul>
                     </li>
                     <li><a href="calendar.html"><i class="zmdi zmdi-calendar"></i> Calendar</a></li>
@@ -370,6 +365,7 @@
                     <li class="sub-menu">
                         <a href="" data-ma-action="submenu-toggle"><i class="zmdi zmdi-collection-item"></i> Sample Pages</a>
                         <ul>
+
                             <li><a href="profile-about.html">Profile</a></li>
                             <li><a href="list-view.html">List View</a></li>
                             <li><a href="messages.html">Messages</a></li>
@@ -380,6 +376,7 @@
                             <li><a href="login.html">Login and Sign Up</a></li>
                             <li><a href="lockscreen.html">Lockscreen</a></li>
                             <li><a href="404.html">Error 404</a></li>
+
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -399,9 +396,6 @@
                             </li>
                             <li><a href="form-validations.html">One more</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="https://wrapbootstrap.com/theme/material-admin-responsive-angularjs-WB011H985"><i class="zmdi zmdi-money"></i> Buy this template</a>
                     </li>
                 </ul>
             </aside>
@@ -482,48 +476,12 @@
                     </div>
                 </div>
             </aside>
-
+        
             <section id="content">
                 <div class="container">
-                    <div class="block-header">
-                        <h2>监控数据</h2>
-
-                        <ul class="actions">
-                            <li>
-                                <a href="">
-                                    <i class="zmdi zmdi-trending-up"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <i class="zmdi zmdi-check-all"></i>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="" data-toggle="dropdown">
-                                    <i class="zmdi zmdi-more-vert"></i>
-                                </a>
-
-                                <ul class="dropdown-menu dropdown-menu-right">
-                                    <li>
-                                        <a href="">Refresh</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Manage Widgets</a>
-                                    </li>
-                                    <li>
-                                        <a href="">Widgets Settings</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </div>
-
                     <div class="card">
                         <div class="card-header">
                             <h2>PH、温度变化趋势 <small>水族缸内PH、温度的变化趋势情况，24小时</small></h2>
-
                             <ul class="actions">
                                 <li>
                                     <a href="">
@@ -557,71 +515,12 @@
 
                         <div class="card-body">
                             <div class="chart-edge">
-                                <div id="curved-line-chart" class="flot-chart "></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mini-charts">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3">
-                                <div class="mini-charts-item">
-                                    <div class="clearfix">
-                                        <div class="chart stats-bar-temp-avg-day"></div>
-                                        <div class="count">
-                                            <small>温度情况（摄氏度）</small>
-                                            <h2 id="temperature">987,459</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-3">
-                                <div class="mini-charts-item">
-                                    <div class="clearfix">
-                                        <div class="chart stats-bar-ph-avg-day"></div>
-                                        <div class="count">
-                                            <small>PH值 （0-14）</small>
-                                            <h2 id="ph">$ 458,778</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-3">
-                                <div class="mini-charts-item">
-                                    <div class="clearfix">
-                                        <div class="chart stats-bar-light-avg-day"></div>
-                                        <div class="count">
-                                            <small>光照情况</small>
-                                            <h2 id="waterLevel">356,785K</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-md-3">
-                                <div class="mini-charts-item card">
-                                    <div class="clearfix">
-                                        <div class="chart stats-bar-salinity-avg-day"></div>
-                                        <div class="count">
-                                            <small>盐度</small>
-                                            <h2 id="tds">23,856</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="dash-widgets">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6">
+                              <div class="col-md-4 col-sm-6">
                                 <div id="site-visits" class="dash-widget-item">
                                     <div class="dw-item">
                                         <div class="dwi-header">
                                             <div class="p-30">
-                                                <div class="dash-widget-visits-temp"></div>
+                                                <div class="dash-widget-visits"></div>
                                             </div>
 
                                             <div class="dwih-title">本月温度的变化情况</div>
@@ -630,265 +529,53 @@
                                         <div class="list-group lg-even-white">
                                             <div class="list-group-item media sv-item">
                                                 <div class="pull-right">
-                                                    <div class="stats-bar-temp-max"></div>
+                                                    <div class="stats-bar"></div>
                                                 </div>
                                                 <div class="media-body">
                                                     <small>历史最大值</small>
-                                                    <h3 id="temp-max">29℃</h3>
+                                                    <h3>29℃</h3>
                                                 </div>
                                             </div>
 
                                             <div class="list-group-item media sv-item">
                                                 <div class="pull-right">
-                                                    <div class="stats-bar-temp-min"></div>
+                                                    <div class="stats-bar-2"></div>
                                                 </div>
                                                 <div class="media-body">
                                                     <small>历史最小值</small>
-                                                    <h3 id="temp-min">23℃</h3>
+                                                    <h3>23℃</h3>
                                                 </div>
                                             </div>
 
                                             <div class="list-group-item media sv-item">
                                                 <div class="pull-right">
-                                                    <div class="stats-bar-temp-avg"></div>
+                                                    <div class="stats-line"></div>
                                                 </div>
                                                 <div class="media-body">
                                                     <small>平均值</small>
-                                                    <h3 id="temp-avg">27℃</h3>
+                                                    <h3>27℃</h3>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-md-4 col-sm-6">
-                                <div id="pie-charts" class="dash-widget-item">
-                                    <div class="dw-item">
-                                        <div class="dwi-header">
-                                            <div class="dwih-title">水族健康情况报告</div>
-                                        </div>
-
-                                        <div class="clearfix"></div>
-
-                                        <div class="text-center p-20 m-t-25">
-                                            <div class="easy-pie main-pie" data-percent="75">
-                                                <div id="averageHealth" class="percent">45</div>
-                                                <div class="pie-title">总体健康情况</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="p-t-25 p-b-20 text-center">
-                                            <div class="easy-pie sub-pie-1" data-percent="56">
-                                                <div  id="tempHealth" class="percent">56</div>
-                                                <div  class="pie-title">温度</div>
-                                            </div>
-                                            <div class="easy-pie sub-pie-2" data-percent="84">
-                                                <div  id="phHealth" class="percent">84</div>
-                                                <div  class="pie-title">PH</div>
-                                            </div>
-                                            <div class="easy-pie sub-pie-2" data-percent="21">
-                                                <div  id="salinityHealth" class="percent">32</div>
-                                                <div  class="pie-title">盐度</div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
                             </div>
-
-                            <div class="col-md-4 col-sm-6">
-                                <div id="site-visits" class="dash-widget-item">
-                                    <div class="dw-item">
-                                        <div class="dwi-header">
-                                            <div class="p-30">
-                                                <div class="dash-widget-visits-ph"></div>
-                                            </div>
-
-                                            <div class="dwih-title">本月PH的变化情况</div>
-                                        </div>
-
-                                        <div class="list-group lg-even-white">
-                                            <div class="list-group-item media sv-item">
-                                                <div class="pull-right">
-                                                    <div class="stats-bar-ph-max"></div>
-                                                </div>
-                                                <div class="media-body">
-                                                    <small>历史最大值</small>
-                                                    <h3 id="ph-max">7.8</h3>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item media sv-item">
-                                                <div class="pull-right">
-                                                    <div class="stats-bar-ph-min"></div>
-                                                </div>
-                                                <div class="media-body">
-                                                    <small>历史最小值</small>
-                                                    <h3 id="ph-min">6.2</h3>
-                                                </div>
-                                            </div>
-
-                                            <div class="list-group-item media sv-item">
-                                                <div class="pull-right">
-                                                    <div class="stats-bar-ph-avg"></div>
-                                                </div>
-                                                <div class="media-body">
-                                                    <small>平均值</small>
-                                                    <h3 id="ph-avg">7.0</h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            
-
-                            <!-- Todo -->
-                            <div id="todo" class="card">
-                                <div class="card-header ch-alt">
-                                    <h2>我的代办事项 <small>提醒你重要的事情</small></h2>
-                                </div>
-
-                                <div class="card-body card-padding">
-                                    <div class="t-add">
-                                        <i class="ta-btn zmdi zmdi-plus" data-ma-action="todo-form-open"></i>
-
-                                        <div class="ta-block">
-                                            <textarea placeholder="添加备忘..."></textarea>
-
-                                            <div class="tab-actions">
-                                                <a data-ma-action="todo-form-close" href=""><i class="zmdi zmdi-close"></i></a>
-                                                <a data-ma-action="todo-form-close" href=""><i class="zmdi zmdi-check"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="list-group">
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            给鱼缸换水
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            买饲料
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="list-group-item media">
-                                            <div class="pull-right">
-                                                <ul class="actions">
-                                                    <li class="dropdown">
-                                                        <a href="" data-toggle="dropdown">
-                                                            <i class="zmdi zmdi-more-vert"></i>
-                                                        </a>
-
-                                                        <ul class="dropdown-menu dropdown-menu-right">
-                                                            <li><a href="">Delete</a></li>
-                                                            <li><a href="">Archive</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="media-body">
-                                                <div class="checkbox checkbox-light">
-                                                    <label>
-                                                        <input type="checkbox">
-                                                        <i class="input-helper"></i>
-                                                        <span>
-                                                            周五去老赵家取沉木
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <!-- Calendar -->
-                            <div class="card" id="calendar-widget">
-                                <div class="card-header ch-alt">
-                                    <div class="cwh-year"></div>
-                                    <div class="cwh-day"></div>
-
-                                    <button class="btn btn-default bg btn-float"><i class="zmdi zmdi-plus"></i></button>
-                                </div>
-
-                                <div class="card-body card-padding-sm">
-                                    <div id="cw-body"></div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </section>
         </section>
-
+        
         <footer id="footer">
-            Copyright &copy; 2015 Hi Fish
-
+            Copyright &copy; 2015 仪表盘
+            
             <ul class="f-menu">
-                <li><a href="">首页</a></li>
-                <li><a href="">监控数据</a></li>
-                <li><a href="">报表</a></li>
-                <li><a href="">技术支持</a></li>
-                <li><a href="">联系人</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Dashboard</a></li>
+                <li><a href="">Reports</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Contact</a></li>
             </ul>
         </footer>
 
@@ -943,35 +630,26 @@
                     </ul>
                 </div>
                 <p>Sorry for the inconvenience!</p>
-            </div>
+            </div>   
         <![endif]-->
-
+    
+    
         <!-- Javascript Libraries -->
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-        <script src="vendors/bower_components/flot/jquery.flot.js"></script>
-        <script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
-        <script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
-        <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
-        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
-
-        <script src="vendors/bower_components/moment/min/moment.min.js"></script>
-        <script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
-        <script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+        
+                <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
         <script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
+        <script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+        <script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+        
         <!-- Placeholder for IE9 -->
         <!--[if IE 9 ]>
             <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
         <![endif]-->
 
-        <script src="js/app.js"></script>
-
-        <!-- hi fish -->
-        <script src="js/fishapp.js"></script>
+        <script src="js/app.min.js"></script>
     </body>
-  </html>
+</html>

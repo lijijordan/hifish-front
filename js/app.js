@@ -243,105 +243,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    /*-------------------------------------------
-        Sparkline
-    ---------------------------------------------*/
-    function sparklineBar(id, values, height, barWidth, barColor, barSpacing) {
-        $('.'+id).sparkline(values, {
-            type: 'bar',
-            height: height,
-            barWidth: barWidth,
-            barColor: barColor,
-            barSpacing: barSpacing
-        })
-    }
-
-    function sparklineLine(id, values, width, height, lineColor, fillColor, lineWidth, maxSpotColor, minSpotColor, spotColor, spotRadius, hSpotColor, hLineColor) {
-        $('.'+id).sparkline(values, {
-            type: 'line',
-            width: width,
-            height: height,
-            lineColor: lineColor,
-            fillColor: fillColor,
-            lineWidth: lineWidth,
-            maxSpotColor: maxSpotColor,
-            minSpotColor: minSpotColor,
-            spotColor: spotColor,
-            spotRadius: spotRadius,
-            highlightSpotColor: hSpotColor,
-            highlightLineColor: hLineColor
-        });
-    }
-
-    function sparklinePie(id, values, width, height, sliceColors) {
-        $('.'+id).sparkline(values, {
-            type: 'pie',
-            width: width,
-            height: height,
-            sliceColors: sliceColors,
-            offset: 0,
-            borderWidth: 0
-        });
-    }
-
-    // Mini Chart - Bar Chart 1
-    if ($('.stats-bar')[0]) {
-        sparklineBar('stats-bar', [6,4,8,6,5,6,7,8,3,5,9,5,8,4], '35px', 3, '#d6d8d9', 2);
-    }
-
-    // Mini Chart - Bar Chart 2
-    if ($('.stats-bar-2')[0]) {
-        sparklineBar('stats-bar-2', [4,7,6,2,5,3,8,6,6,4,8,6,5,8], '35px', 3, '#d6d8d9', 2);
-    }
-
-    // Mini Chart - Line Chart 1
-    if ($('.stats-line')[0]) {
-        sparklineLine('stats-line', [9,4,6,5,6,4,5,7,9,3,6,5], 68, 35, '#fff', 'rgba(0,0,0,0)', 1.25, '#d6d8d9', '#d6d8d9', '#d6d8d9', 3, '#fff', '#d6d8d9');
-    }
-
-    // Mini Chart - Line Chart 2
-    if ($('.stats-line-2')[0]) {
-        sparklineLine('stats-line-2', [5,6,3,9,7,5,4,6,5,6,4,9], 68, 35, '#fff', 'rgba(0,0,0,0)', 1.25, '#d6d8d9', '#d6d8d9', '#d6d8d9', 3, '#fff', '#d6d8d9');
-    }
-
-    // Mini Chart - Pie Chart 1
-    if ($('.stats-pie')[0]) {
-        sparklinePie('stats-pie', [20, 35, 30, 5], 45, 45, ['#fff', 'rgba(255,255,255,0.7)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.2)']);
-    }
-
-    // Dash Widget Line Chart
-    if ($('.dash-widget-visits')[0]) {
-        sparklineLine('dash-widget-visits', [9,4,6,5,6,4,5,7,9,3,6,5], '100%', '70px', 'rgba(255,255,255,0.7)', 'rgba(0,0,0,0)', 1, 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 5, 'rgba(255,255,255,0.4)', '#fff');
-    }
-
-
-    /*-------------------------------------------
-        Easy Pie Charts
-    ---------------------------------------------*/
-    function easyPieChart(id, trackColor, scaleColor, barColor, lineWidth, lineCap, size) {
-        $('.'+id).easyPieChart({
-            trackColor: trackColor,
-            scaleColor: scaleColor,
-            barColor: barColor,
-            lineWidth: lineWidth,
-            lineCap: lineCap,
-            size: size
-        });
-    }
-
-    // Main Pie Chart
-    if ($('.main-pie')[0]) {
-        easyPieChart('main-pie', 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0)', 'rgba(255,255,255,0.7)', 2, 'butt', 148);
-    }
-
-    // Others
-    if ($('.sub-pie-1')[0]) {
-        easyPieChart('sub-pie-1', 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0)', 'rgba(255,255,255,0.7)', 2, 'butt', 95);
-    }
-
-    if ($('.sub-pie-2')[0]) {
-        easyPieChart('sub-pie-2', 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0)', 'rgba(255,255,255,0.7)', 2, 'butt', 95);
-    }
+    
 });
 
 $(window).load(function(){
@@ -505,7 +407,7 @@ $(document).ready(function(){
     /*---------------------------------
         Chart Options
      ---------------------------------*/
-    var options = {
+    options = {
         series: {
             shadowSize: 0,
             curvedLines: { //This is a third party plugin to make curved lines
@@ -542,15 +444,7 @@ $(document).ready(function(){
     };
     
 
-    /*---------------------------------
-        Let's create the chart
-     ---------------------------------*/
-    if ($("#curved-line-chart")[0]) {
-        $.plot($("#curved-line-chart"), [
-            {data: d1, lines: { show: true, fill: 0.98 }, label: 'Product 1', stack: true, color: '#1f292f' },
-            {data: d3, lines: { show: true, fill: 0.98 }, label: 'Product 2', stack: true, color: '#dbdddd' }
-        ], options);
-    }
+    
     
 
     /*---------------------------------
@@ -710,7 +604,7 @@ $(document).ready(function(){
         return res;
     }
     
-    // Make some random data for Flot Line Chart
+    // Make some random data for F10t Line Chart
     
     var d1 = [];
     for (var i = 0; i <= 10; i += 1) {
@@ -893,28 +787,267 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
    $('html').addClass('ismobile');
 }
 
+/*-------------------------------------------
+        Sparkline
+    ---------------------------------------------*/
+    function sparklineBar(id, values, height, barWidth, barColor, barSpacing) {
+        $('.'+id).sparkline(values, {
+            type: 'bar',
+            height: height,
+            barWidth: barWidth,
+            barColor: barColor,
+            barSpacing: barSpacing
+        })
+    }
+
+    function sparklineLine(id, values, width, height, lineColor, fillColor, lineWidth, maxSpotColor, minSpotColor, spotColor, spotRadius, hSpotColor, hLineColor) {
+        $('.'+id).sparkline(values, {
+            type: 'line',
+            width: width,
+            height: height,
+            lineColor: lineColor,
+            fillColor: fillColor,
+            lineWidth: lineWidth,
+            maxSpotColor: maxSpotColor,
+            minSpotColor: minSpotColor,
+            spotColor: spotColor,
+            spotRadius: spotRadius,
+            highlightSpotColor: hSpotColor,
+            highlightLineColor: hLineColor
+        });
+    }
+
+    function sparklinePie(id, values, width, height, sliceColors) {
+        $('.'+id).sparkline(values, {
+            type: 'pie',
+            width: width,
+            height: height,
+            sliceColors: sliceColors,
+            offset: 0,
+            borderWidth: 0
+        });
+    }
+
+    
+
+    // Mini Chart - Bar Chart 2
+    if ($('.stats-bar-2')[0]) {
+        sparklineBar('stats-bar-2', [1,2,3], '35px', 3, '#d6d8d9', 2);
+    }
+
+    // Mini Chart - Line Chart 1
+    if ($('.stats-line')[0]) {
+        sparklineLine('stats-line', [9,4,6,5,6,4,5,7,9,3,6,5], 68, 35, '#fff', 'rgba(0,0,0,0)', 1.25, '#d6d8d9', '#d6d8d9', '#d6d8d9', 3, '#fff', '#d6d8d9');
+    }
+
+    // Mini Chart - Line Chart 2
+    if ($('.stats-line-2')[0]) {
+        sparklineLine('stats-line-2', [5,6,3,9,7,5,4,6,5,6,4,9], 68, 35, '#fff', 'rgba(0,0,0,0)', 1.25, '#d6d8d9', '#d6d8d9', '#d6d8d9', 3, '#fff', '#d6d8d9');
+    }
+
+    // Mini Chart - Pie Chart 1
+    if ($('.stats-pie')[0]) {
+        sparklinePie('stats-pie', [20, 35, 30, 5], 45, 45, ['#fff', 'rgba(255,255,255,0.7)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.2)']);
+    }
+
+
+    /*-------------------------------------------
+        Easy Pie Charts
+    ---------------------------------------------*/
+    function easyPieChart(id, trackColor, scaleColor, barColor, lineWidth, lineCap, size) {
+        $('.'+id).easyPieChart({
+            trackColor: trackColor,
+            scaleColor: scaleColor,
+            barColor: barColor,
+            lineWidth: lineWidth,
+            lineCap: lineCap,
+            size: size
+        });
+    }
+
+    // Main Pie Chart
+    if ($('.main-pie')[0]) {
+        easyPieChart('main-pie', 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0)', 'rgba(255,255,255,0.7)', 2, 'butt', 148);
+    }
+
+    // Others
+    if ($('.sub-pie-1')[0]) {
+        easyPieChart('sub-pie-1', 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0)', 'rgba(255,255,255,0.7)', 2, 'butt', 95);
+    }
+
+    if ($('.sub-pie-2')[0]) {
+        easyPieChart('sub-pie-2', 'rgba(0,0,0,0.2)', 'rgba(255,255,255,0)', 'rgba(255,255,255,0.7)', 2, 'butt', 95);
+    }
+
+Array.prototype.max = function() {
+  return Math.max.apply(null, this);
+};
+
+Array.prototype.min = function() {
+  return Math.min.apply(null, this);
+};
 $(window).load(function () {
     /* --------------------------------------------------------
         Page Loader
      -----------------------------------------------------------*/
     if($('.page-loader')[0]) {
         $.ajax({
-           url: "/fishapi/sensor/getsensorcurval/1/PH/",
+           url: "/fishapi/sensor/getHomePageVal/1/1",
            xhrFields: {
               withCredentials: true
            }
         }).done(function( data ) {
-            if(data.status == 200){
-                $("#ph").text(data.content.value);
-                 $("#temperature").text(data.content.value);
-                  $("#waterLevel").text(data.content.value);
-                  $("#tds").text(data.content.value);
-                  $('.page-loader').fadeOut();
-            }else{
-                console.log("接口异常！");
+            // 当前值
+           $("#ph").text(data.phCurValue);
+           $("#temperature").text(data.tempCurValue);
+           $("#waterLevel").text(data.lightCurValue);
+           $("#tds").text(data.tdsCurValue);
+            // 健康度
+           $("#averageHealth").text(data.averageHealth);
+           $("#tempHealth").text(data.tempHealth);
+           $("#phHealth").text(data.phHealth);
+           $("#salinityHealth").text(data.salinityHealth);
+           //============================PH、温度变化趋势=========================
+            tempAverageValueByDay =[];
+            phAverageValueByDay =[];
+            var tempAverageValueByDayOrigin = data.tempAverageValueByDay;
+           for(var i=0;i<24;i++){
+                tempAverageValueByDay.push([i, parseInt(tempAverageValueByDayOrigin[i].value)]);
+           }
+           var phAverageValueByDayOrigin = data.phAverageValueByDay;
+           for(var i=0;i<24;i++){
+                phAverageValueByDay.push([i, parseInt(phAverageValueByDayOrigin[i].value)]);
+           }
+            if ($("#curved-line-chart")[0]) {
+                $.plot($("#curved-line-chart"), [
+                    {data: tempAverageValueByDay, lines: { show: true, fill: 0.3 }, label: 'Product 1', stack: false, color: 'BLACK' },
+                    {data: phAverageValueByDay, lines: { show: true, fill: 0.3 }, label: 'Product 2', stack: true, color: '#dbdddd' }
+                ], options);
             }
-              //console.log( "Sample of data:", data);
-          });
+            //==========================================本月温度的变化情况==========================================
+            var tempAverageValueByMonth = [];
+            for(var i=0;i<30;i++){
+                tempAverageValueByMonth.push([i, parseInt(data.tempAverageValueByMonth[i].value)]);
+            }
+            if ($('.dash-widget-visits-ph')[0]) {
+                sparklineLine('dash-widget-visits-ph', tempAverageValueByMonth, '100%', '70px', 'rgba(255,255,255,0.7)', 'rgba(0,0,0,0)', 1, 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 5, 'rgba(255,255,255,0.4)', '#fff');
+            }
+            //============================本月PH的变化情况=========================
+            var phAverageValueByMonth = [];
+            for(var i=0;i<30;i++){
+                phAverageValueByMonth.push([i, parseInt(data.phAverageValueByMonth[i].value)]);
+            }
+            if ($('.dash-widget-visits')[0]) {
+                sparklineLine('dash-widget-visits-ph', phAverageValueByMonth, '100%', '70px', 'rgba(255,255,255,0.7)', 'rgba(0,0,0,0)', 1, 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 5, 'rgba(255,255,255,0.4)', '#fff');
+            }
+            //============================历史最大值=========================
+            var phMaxValueByMonth = [];
+            for(var i=0;i<30;i++){
+                phMaxValueByMonth.push(parseInt(data.phMaxValueByMonth[i].value));
+            }
+            if ($('.stats-bar-ph-max')[0]) {
+                sparklineBar('stats-bar-ph-max', phMaxValueByMonth, '35px', 3, '#d6d8d9', 2);
+            }
+            $("#ph-max").text(Math.max.apply(null, phMaxValueByMonth));
+            //============================历史最小值=========================
+            var phMinValueByMonth = [];
+            for(var i=0;i<30;i++){
+                phMinValueByMonth.push(parseInt(data.phMinValueByMonth[i].value));
+            }
+            if ($('.stats-bar-ph-min')[0]) {
+                sparklineBar('stats-bar-ph-min', phMinValueByMonth, '35px', 3, '#d6d8d9', 2);
+            }
+            $("#ph-min").text(Math.min.apply(null, phMinValueByMonth));
+            //============================历史平均值=========================
+            var phAverageValueByMonth = [];
+            var phSum = 0;
+            for(var i=0;i<30;i++){
+                phSum += parseInt(data.phAverageValueByMonth[i].value);
+                phAverageValueByMonth.push(parseInt(data.phAverageValueByMonth[i].value));
+            }
+            if ($('.stats-bar-ph-min')[0]) {
+                sparklineBar('stats-bar-ph-avg', phAverageValueByMonth, '35px', 3, '#d6d8d9', 2);
+            }
+            $("#ph-avg").text(phSum/30);
+
+            //========================================本月PH的变化情况=============================
+            var tempAverageValueByMonth = [];
+            for(var i=0;i<30;i++){
+                tempAverageValueByMonth.push([i, parseInt(data.tempAverageValueByMonth[i].value)]);
+            }
+            if ($('.dash-widget-visits-temp')[0]) {
+                sparklineLine('dash-widget-visits-temp', tempAverageValueByMonth, '100%', '70px', 'rgba(255,255,255,0.7)', 'rgba(0,0,0,0)', 1, 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 'rgba(255,255,255,0.4)', 5, 'rgba(255,255,255,0.4)', '#fff');
+            }
+            //============================历史最大值=========================
+            var tempMaxValueByMonth = [];
+            for(var i=0;i<30;i++){
+                tempMaxValueByMonth.push(parseInt(data.tempMaxValueByMonth[i].value));
+            }
+            if ($('.stats-bar-temp-max')[0]) {
+                sparklineBar('stats-bar-temp-max', tempMaxValueByMonth, '35px', 3, '#d6d8d9', 2);
+            }
+            $("#temp-max").text(Math.max.apply(null, tempMaxValueByMonth) + "℃");
+            //============================历史最小值=========================
+            var tempMinValueByMonth = [];
+            for(var i=0;i<30;i++){
+                tempMinValueByMonth.push(parseInt(data.tempMinValueByMonth[i].value));
+            }
+            if ($('.stats-bar-temp-min')[0]) {
+                sparklineBar('stats-bar-temp-min', tempMinValueByMonth, '35px', 3, '#d6d8d9', 2);
+            }
+            $("#temp-min").text(Math.min.apply(null, tempMinValueByMonth) + "℃");
+            //============================历史平均值=========================
+            var tempAverageValueByMonth = [];
+            var tempSum = 0;
+            for(var i=0;i<30;i++){
+                tempSum += parseInt(data.tempAverageValueByMonth[i].value);
+                tempAverageValueByMonth.push(parseInt(data.tempAverageValueByMonth[i].value));
+            }
+            if ($('.stats-bar-temp-avg')[0]) {
+                sparklineBar('stats-bar-temp-avg', tempAverageValueByMonth, '35px', 3, '#d6d8d9', 2);
+            }
+            $("#temp-avg").text(tempSum/30 + "℃");
+           //========================================日温度情况=============================
+            var tempAverageValueByDay = [];
+            for(var i=0;i<24;i++){
+                tempAverageValueByDay.push(parseInt(data.tempAverageValueByDay[i].value));
+            }
+            if ($('.stats-bar-temp-avg-day')[0]) {
+                sparklineBar('stats-bar-temp-avg-day', tempAverageValueByDay, '35px', 2, '#d6d8d9', 1);
+                // sparklineBar('stats-bar-2', [1,2,3], '35px', 3, '#d6d8d9', 2);
+            }
+            //========================================日PH情况=============================
+            var phAverageValueByDay = [];
+            for(var i=0;i<24;i++){
+                phAverageValueByDay.push(parseInt(data.phAverageValueByDay[i].value));
+            }
+            if ($('.stats-bar-ph-avg-day')[0]) {
+                sparklineBar('stats-bar-ph-avg-day', phAverageValueByDay, '35px', 2, '#d6d8d9', 1);
+                // sparklineBar('stats-bar-2', [1,2,3], '35px', 3, '#d6d8d9', 2);
+            }
+            //========================================日PH情况=============================
+            var lightAverageValueByDay = [];
+            for(var i=0;i<24;i++){
+                lightAverageValueByDay.push(parseInt(data.lightAverageValueByDay[i].value));
+            }
+            if ($('.stats-bar-light-avg-day')[0]) {
+                sparklineBar('stats-bar-light-avg-day', lightAverageValueByDay, '35px', 2, '#d6d8d9', 1);
+                // sparklineBar('stats-bar-2', [1,2,3], '35px', 3, '#d6d8d9', 2);
+            }
+            //========================================日盐度情况=============================
+            var salinityAverageValueByDay = [];
+            for(var i=0;i<24;i++){
+                salinityAverageValueByDay.push(parseInt(data.salinityAverageValueByDay[i].value));
+            }
+            if ($('.stats-bar-salinity-avg-day')[0]) {
+                sparklineBar('stats-bar-salinity-avg-day', salinityAverageValueByDay, '35px', 2, '#d6d8d9', 1);
+                // sparklineBar('stats-bar-2', [1,2,3], '35px', 3, '#d6d8d9', 2);
+            }
+
+
+           $('.page-loader').fadeOut();
+           
+        });
     }
 })
 
